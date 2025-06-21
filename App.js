@@ -163,18 +163,40 @@ root.render(parent);
  * ReactElement(Object) => HTML(Browser Understands)
  */
 
+
+// const parent = React.createElement("div", { id: "parent" }, [
+//   React.createElement("div", { id: "child1" }, [
+//     React.createElement("h1", {}, "I am an h1 tag"),
+//     React.createElement("h2", {}, "I am an h2 tag"),
+//   ]),
+//   React.createElement("div", { id: "child2" }, [
+//     React.createElement("h1", {}, "I am an h1 tag"),
+//     React.createElement("h2", {}, "I am an h2 tag"),
+//   ]),
+// ]);
+// console.log(parent);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(parent);
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "I am an h1 tag"),
-    React.createElement("h2", {}, "I am an h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I am an h1 tag"),
-    React.createElement("h2", {}, "I am an h2 tag"),
-  ]),
-]);
-console.log(parent);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+// const jsxHeading =(<h1 id="heading">H1 by jsx</h1>);
+// console.log(jsxHeading);
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(jsxHeading);
+
+const Title = () => {
+  return <h1>React by funstional component </h1>;
+};
+
+const HeadingComponent=()=> (
+  <div id="hello">
+    <Title />
+    <h1>i am here again</h1>
+  </div>
+);
+
+const root=ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent/>);

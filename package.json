@@ -4,7 +4,8 @@
   "description": "��#\u0000 \u0000R\u0000e\u0000a\u0000c\u0000t\u0000\r\u0000 \u0000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
